@@ -5,28 +5,22 @@ import socket                       # Importing socket module
 s = socket.socket()                 # Create a socket object
 
 connections = []                    # Creating a list of connections made or were possible
-
-while True:
-    num_of_connections = raw_input("Maximum number of connections allowed?: ")      #Getting the maximum number of connections allowed by the user
-    try:
-        connection_number = int(num_of_connections)        # Try to convert to integer
-        break                                               # Exit the loop
-    except:
-        "Please try again. Number only."                    # Asks the user for a proper input if any error are present
+buffer_size = 20                    # setting buffer size
 
 # setting up current machine connection information
 host = socket.gethostname()         # Get local machine name
 port = 1604                         # Reserve a port for your service
 s.bind((host, port))                  # Binding to the port
 
-for _ in range(0, int(connection_number)):
-    s.listen                         # Listening for incomming connections
-socket.socket.
-    while True:
-        c, addr = s.accept()            # Accepts waiting connection
-        peer_address = s.getpeername()  # Getting peer information
-        print 'Got connection from {0}'.format(addr)
-        connections.append(peer_address)
-        c.close()
+print "Awaiting connection. Once connection is made, attack will start to comprimise system and show its vulnerabilities. Please only use this legally."
+s.listen(5)                            # Listening for incomming connections
+c, addr = s.accept()            # Accepts waiting connection
+while True:
+    data = c.recv(buffersize=buffer_size)
+    if not data:
+        break
 
-print connections
+    print "Recieved Data: ", data
+c.close()
+
+
