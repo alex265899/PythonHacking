@@ -34,5 +34,3 @@ elif file_or_string == 's':         # If the user wants to encode a string
 
 else:                       # If the user does not choose anything
     print "None chosen"
-
-
