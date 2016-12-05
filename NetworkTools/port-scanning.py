@@ -6,19 +6,19 @@ import nmap
 nm = nmap.PortScanner()
 
 # getting host from user
-host = raw_input("Target: ")
+host = input("Target: ")
 # getting ports from user
-ports = raw_input("Ports (ex. 22,13,42,144-928): ")
+ports = input("Ports (ex. 22,13,42,144-928): ")
 # getting arguments
-arguments = raw_input('Arguments (Like your using regular NMAP): ')
+arguments = input('Arguments (Like your using regular NMAP): ')
 # scanning
 nm.scan(hosts=host, ports=ports, arguments=arguments)
 
 # ----------------------------------------------------------------------------
 # main menu
 while True:
-    print "WHAT WOULD YOU LIKE TO DO?"
-    print \
+    print("WHAT WOULD YOU LIKE TO DO?")
+    print(\
         """
         [1] Get all hosts that were scanned
         [2] Get NMAP scan information
@@ -30,33 +30,33 @@ while True:
         [8] Get all ports for IP
         [9] Get all ports for SCTP
         [0] Quit
-        """
+        """)
     user_choice = int
     while (9 < user_choice) or (user_choice < 1):
         try:
-            user_choice = int(raw_input(">>> "))
+            user_choice = int(input(">>> "))
         except:
-            print "Try again"
+            print("Try again")
     # ----------------------------------------------------------------
     # choices
     if user_choice == 1:
-        print nm.all_hosts()
+        print(nm.all_hosts())
     if user_choice == 2:
-        print nm.scaninfo()
+        print(nm.scaninfo())
     if user_choice == 3:
-        print nm[host].hostnames()
+        print(nm[host].hostnames())
     if user_choice == 4:
-        print nm[host].state()
+        print(nm[host].state())
     if user_choice == 5:
-        print nm[host].all_protocols()
+        print(nm[host].all_protocols())
     if user_choice == 6:
-        print nm[host].all_tcp()
+        print(nm[host].all_tcp())
     if user_choice == 7:
-        print nm[host].all_udp()
+        print(nm[host].all_udp())
     if user_choice == 8:
-        print nm[host].all_ip()
+        print(nm[host].all_ip())
     if user_choice == 9:
         for item in nm.all_hosts():
-            print nm[nm.all_hosts().index(item)].all_sctp()
+            print(nm[nm.all_hosts().index(item)].all_sctp())
     if user_choice == 0:
         exit()
