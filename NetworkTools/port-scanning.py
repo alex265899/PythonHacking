@@ -29,10 +29,10 @@ addr = input('Target: ')
 # getting the ports
 ports = input('Ports: ')
 # getting the arguments
-arg = input('Arguments: ')
+args = input('Arguments: ')
 
 # initiating scan
-pscan(addr, ports, args=arg)
+pscan(addr, ports, args=args)
 
 # creating object stats and info
 stats = nmscan.scanstats()
