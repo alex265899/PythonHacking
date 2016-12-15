@@ -1,67 +1,55 @@
-#!usr/bin/env python27
-import base64
+#! /usr/bin/env python3.4
 
-#============================================
-# Base64
-# Encoding string to base64
-def base64_encode(x):
-    try:
-        return base64.b64encode(x)
-    except BaseException:
-        return "Encryption Not Possible"
+"""
+TODO:
+    @alexander chapman: implement error handling
+"""
 
-# Decoding string from base64
-def base64_decode(x):
-    try:
-        return base64.b64_decode(x)
-    except BaseException:
-        return "Decryption not possible"
-# =============================================
-# Base32
-# Encoding string to base32
-def base32_encode(x):
-    try:
-        return base64.b32encode(x)
-    except BaseException:
-        return "Encryption not possible"
-
-# Decoding string from base32
-def base32_decode(x):
-    try:
-        return base64.b32decode(x)
-    except BaseException:
-        return "Decoding not possible"
-# ============================================
-# Base16
-# Encoding string to base16
-def base16_encode(x):
-    try:
-        return base64.b16encode(x):
-    except BaseException:
-        return "Encryption not possible"
-
-# Decoding from base16
-def base16_decode(x):
-    try:
-        return base64.b16decode(x)
-    except BaseException:
-        return "Decryption not possible"
-
-print "Base64/32/16 Encoding/Decoding"
-usrInput = raw_input("String >>> ")
+# import base64 module
 
 
-# setting newline variable
-linebreak = "====================================================="
-print linebreak
+# Encryption class
+class Encryption:
+    # base64
+    def bs64(string):
+        return base64.b64encode(string)
 
-print "Base64 Results:"
-print "     Encryption: {}".format(base64_encode(usrInput))
-print "     Decryption: {}".format(base64_decode(usrInput))
-print linebreak
-print "Base32 Results:"
-print "     Encryption: {}".format(base32_encode(usrInput))
-print "     Decryption: {}".format(base32_decode(usrInput))
-print linebreak
-print "Base16 Results"
-print "     "
+    # base32
+    def bs32(string):
+        return base64.b32encode(string)
+
+    # base16
+    def bs16(string):
+        return base64.b16encode(string)
+
+
+# decryption class
+class Decryption:
+    # base64
+    def bs64(string):
+        return base64.b64decode(string)
+
+    # base32
+    def bs32(string):
+        return base64.b32decode(string)
+
+    # base16
+    def bs16(string):
+        return base64.b16decode(string)
+
+# getting input from the user
+usrInput = input("String: ")
+
+# printing out all results of possible decryption and encryption
+
+#Decryption results
+print("Decryption")
+print("Base64: ", Decryption.bs64(usrInput))
+print("Base32: ", Decryption.bs32(usrInput))
+print("Base16: ", Decryption.bs16(usrInput))
+
+#Seperator
+print("#"*50)
+
+#Encryption results
+

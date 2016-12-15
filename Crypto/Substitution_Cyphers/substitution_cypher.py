@@ -36,15 +36,18 @@ alphabet = {
 # Blank list for assigning random numbers
 list_of_numbers = []
 
+
 # Function to get random numbers
 def get_random_num():
     x = random.randint
     return int(x)
 
+
 # Function to make a list of random numbers
 def assign_random():
-    for _ in range(0_26):
+    for _ in range(0, 26):
+        # unfinished
+        pass
 
 
-string_input = raw_input("String to encode: ")
-
+string_input = input("String to encode: ")
