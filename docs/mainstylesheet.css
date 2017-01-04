@@ -1,0 +1,54 @@
+body{
+    background: #000000; /* black */
+}
+div.title{
+    width: 1000px;
+    margin: auto;
+    border: transparent;
+    color: #00ff00; /* lime */
+    font-size: 100px;
+    font-family: Consolas;
+    text-align: left;
+}
+div.sectionHeader{
+    width: 100px;
+    margin: auto;
+    border: transparent;
+    color: #adff2f; /* green-yellow */
+    font-size: 25px;
+    font-family: Consolas;
+    text-align: left;
+}
+div.aboutText{
+    width: 1000px;
+    margin: auto;
+    border: transparent;
+    color: limegreen; /* lime-green */
+    font-size: 12px;
+    font-family: Consolas;
+    text-align: left;
+}
+ul.branchList{
+    list-style-type: circle;
+    text-indent: 4px;
+    width: 1000px;
+    margin: auto;
+    border: transparent;
+    color: limegreen;
+    font-size: 12px;
+    font-family: Consolas;
+    text-align: left;
+}
+div.contactInfo{
+    width: 1000px;
+    margin:auto;
+    border: limegreen;
+    border-width: 5px;
+    color: lime;
+    font-size: 15px;
+    font-family: Consolas;
+    text-align: left;
+}
+footer.contactSection{
+
+}
