@@ -2,7 +2,7 @@
 
 """
 TODO:
-    @alexander chapman: implement error handling
+    Nothing at the moment
 """
 
 # import base64 module
@@ -52,4 +52,3 @@ print("Base16: ", Decryption.bs16(usrInput))
 print("#"*50)
 
 #Encryption results
-
