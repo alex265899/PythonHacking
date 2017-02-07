@@ -167,7 +167,10 @@ if ipv6Scan == True:
 else:
     pass
 
-# output
+# output results to the three most common file types with a given basename
 command = command + optionGen(' -oA', outputFileBasename)
 
+###########################
+# outputting final command
+###########################
 print(command)
