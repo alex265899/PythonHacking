@@ -1,3 +1,5 @@
+import sys
+
 def file(name):
 	newFile = open(name, mode='r')
 	contents = newFile.read()
@@ -6,7 +8,7 @@ def file(name):
 
 plaintext = input("Plaintext File: ")
 password = input("File to encrypt with: ")
-writeto = input("Write to file (must already be created): ")
+write_to = input("Write to file (must already be created): ")
 
 plaintext = file(plaintext)
 password = file(password)
@@ -27,11 +29,12 @@ for item1,item2 in zip(plaintext,password):
 	item1 = ord(item1)
 	item2 = ord(item2)
 	xored = item1^item2
-	print(chr(xored))
+	sys.stdout.write("\r %s" % chr(xored))
 	result = result + chr(xored)
 
-print(result)
-resultFile = open(writeto, 'w')
+
+
+resultFile = open(write_to, 'w')
 resultFile.write(result)
 resultFile.close()
 
